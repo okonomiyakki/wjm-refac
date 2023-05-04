@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react'
+import SearchPlaces from './SearchPlace';
 
 const kakao = (window as any).kakao;
 
 const MapContainer = () => {
+
     useEffect(() => {
         const container = document.getElementById('map'),
             mapOption = {
@@ -11,12 +13,14 @@ const MapContainer = () => {
             };
         // 지도를 생성합니다    
         const map = new kakao.maps.Map(container, mapOption);
+
+
     }, []);
 
     return (
         <>
-            <div id="map" style={{ width: "100%", height: "800px" }}>
-            </div>
+            {/* <div id="map" style={{ width: "100%", height: "800px" }}></div> */}
+            <div id="map" style={{ width: "100%", height: "800px",position:"relative",overflow:"hidden"}}></div>
         </>
     )
 }

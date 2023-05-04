@@ -1,12 +1,10 @@
 import './App.css';
-import Map from './components/MapContainer';
-
-
+import Start from './pages/Start';
 
 function App() {
   return (
     <>
-        <Map/>
+        <Start/>
     </>
   );
 }
