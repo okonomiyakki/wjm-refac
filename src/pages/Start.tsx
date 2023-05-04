@@ -4,7 +4,7 @@ import SearchPlaces from "../components/SearchPlace";
 function Start() {
     return (
         <>
-            <MapContainer />
+            {/* <MapContainer/> */}
             <SearchPlaces />
         </>
     );

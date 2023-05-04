@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
-import SearchPlaces from './SearchPlace';
+import { propsType } from './SearchPlace'
 
 const kakao = (window as any).kakao;
 
-const MapContainer = () => {
+const MapContainer = (props: propsType) => {
 
     useEffect(() => {
         const container = document.getElementById('map'),
@@ -14,8 +14,10 @@ const MapContainer = () => {
         // 지도를 생성합니다    
         const map = new kakao.maps.Map(container, mapOption);
 
-
-    }, []);
+        const ps = new kakao.maps.services.Places(); 
+        const infowindow = new kakao.maps.InfoWindow({ zIndex: 1 });
+        // searchPlaces();
+    }, [props.searchKeyword]);
 
     return (
         <>
