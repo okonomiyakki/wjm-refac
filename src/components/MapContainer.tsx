@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 
 const kakao = (window as any).kakao;
 
-export default function Start() {
+const MapContainer = () => {
     useEffect(() => {
         const container = document.getElementById('map'),
             mapOption = {
@@ -20,3 +20,5 @@ export default function Start() {
         </>
     )
 }
+
+export default MapContainer;
